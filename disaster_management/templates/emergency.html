@@ -1,0 +1,72 @@
+{% extends './base.html' %}
+
+{% block links %} <link rel="stylesheet" href="{url_for('static', filename='css/emergency.css')}"> {% endblock links %}
+
+{% block content %}
+<div class="message">
+    <strong>Enter your details</strong>
+  </div>
+
+  <div class="form">
+    <form action="">
+      <br />
+      <div>{{form.type.label(class="labels")}}</div>
+      {% if form.type.errors %}
+      {{form.type(class="input")}}
+      {% for error in form.type.errors %}
+      <div>
+        <span>{{error}}</span>
+      </div>
+      {% endfor %}
+
+      {% else %}
+      {{form.type(class="input")}}
+      {% endif %}
+      <br />
+      <div>{{form.pin_code.label(class="labels")}}</div>
+      {% if form.pin_code.errors %}
+      {{form.pin_code(class="input")}}
+      {% for error in form.pin_code.errors %}
+      <div>
+        <span>{{error}}</span>
+      </div>
+      {% endfor %}
+
+      {% else %}
+      {{form.pin_code(class="input")}}
+      {% endif %}
+      <br />
+      <div>{{form.phone.label(class="labels")}}</div>
+      {% if form.phone.errors %}
+      {{form.phone(class="input")}}
+      {% for error in form.phone.errors %}
+      <div>
+        <span>{{error}}</span>
+      </div>
+      {% endfor %}
+
+      {% else %}
+      {{form.phone(class="input")}}
+      {% endif %}
+      <br>
+      <div>{{form.severeness.label(class="labels")}}</div>
+      {% if form.severeness.errors %}
+      {{form.severeness(class="input")}}
+      {% for error in form.severeness.errors %}
+      <div>
+        <span>{{error}}</span>
+      </div>
+      {% endfor %}
+
+      {% else %}
+      {{form.severeness(class="input")}}
+      {% endif %}
+      <br>
+      {{form.submit(class="button")}}
+
+    </form>
+  </div>
+
+  </div>
+
+  {% endblock content %}

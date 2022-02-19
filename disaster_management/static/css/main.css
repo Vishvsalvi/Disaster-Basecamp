@@ -1,0 +1,174 @@
+.container{
+    font-family: monospace;
+    display: grid;
+    /* position: relative;
+    bottom: 0.38em;
+    height: 4.1em; */
+    grid-row-gap: 1.875em;
+    color: black;
+    grid-template-columns: repeat(6, 1fr);
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    bottom: 0.47em;
+}
+.items{
+    font-size: 1.2em;
+    position: relative;
+    top: 0.47em;
+    display: flex;
+    height: 3em;
+    color: white;
+    justify-content: center;
+    text-align: center;
+    align-content: center;
+    font-weight: 100;
+    background-color: rgb(31, 30, 30);
+    /* width: 105%; */
+}
+a{
+    position: relative;
+    top: 0.4em;
+    font-size: 1.6em;
+    align-items: center;
+    text-align: center;
+    text-decoration: none;
+    color: white;
+}
+.login{
+    color: white;
+    /* width: 100%; */
+    display: flexbox;
+    /* padding-top: 6em; */
+    background-color: rgb(110, 110, 246);
+    height: 8em;
+    grid-column-start: 1;
+    grid-column-end: 7;
+    /* position: relative;
+    right: 0.47em; */
+    /* width: 102%; */
+    text-align: center;
+    justify-content: center;
+    font-size: 3em;
+    animation-name: loginHere;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-delay: 1s;
+    animation-timing-function: ease-in-out;
+
+}
+strong{
+    position: relative;
+    top: 3.5em;
+    right: 19em;
+}
+
+.form{
+    padding: 2em;
+    padding-left: 5em;
+    /* background-color: rgb(162, 203, 241); */
+    background-color: #b7eef8;
+    grid-column-start: 1;
+    grid-column-end:5;
+    height: 45em;
+}
+.input {
+    font-family: monospace;
+    font-weight: 500;
+    padding: 0.5em;
+    font-size: 1.6em;
+    width: 25em;
+    margin: 7px;
+    border: 1px solid white;
+    border-radius: 5px;
+    color: #212121;
+  }
+
+.labels{
+    font-size: 1.53em;
+    position: relative;
+    left: 0.4em;
+    font-weight: 600;
+}  
+span{
+    color: red;
+}
+.button {
+    margin-top: 1.4em;
+    width: 7em;
+    height: 2em;
+    background-color: blue;
+    /* background-color: #D2691E; */
+    border: 1px solid blue;
+    color: white;
+    font-size: 1.35em;
+    font-family: monospace;
+    font-weight: 800;
+    border-radius: 4px;
+    position: relative;
+    left: 0.2em;
+}
+button:hover{
+    cursor: pointer;
+    background-color: rgb(74, 74, 250);
+}
+.line{
+    background-color: white;
+    /* height: 0.115em; */
+    height: 1.15%;
+    position: relative;
+    left: 19.8em;
+    top: 0.213em;
+    width: 16.5%;
+    animation-name: loginLine;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate-reverse;
+    animation-delay: 1s;
+    animation-timing-function: ease-in-out;
+    
+}
+@keyframes loginHere{
+  0%{
+      color:rgb(110, 110, 246) ;
+  }
+  5%{
+      color: rgb(110, 110, 246);
+  }
+}
+@keyframes loginLine{
+   0%{
+       display: none;
+       width:0%
+   }
+}
+.sign-in{
+    background-color: grey;
+    background-color: #b7eef8;
+
+    grid-column-start: 5;
+    grid-column-end: 7;
+    height: 49  em;
+    position: relative;
+    /* bottom: 2em; */
+    
+}
+.loginMsg{
+    color: black;
+    font-size: 2em;
+    position: relative;
+    top: 8.5em;
+    left: 0em;
+}
+.loginLink{
+    position: relative;
+    top: 11em;
+    left: -11em;
+    color: blue;
+    font-weight: 100;
+    font-size:2em;
+}
+
+.invalid-feedback {
+    color: red; font-size: 0.8em; position: relative; left: 12px;
+}

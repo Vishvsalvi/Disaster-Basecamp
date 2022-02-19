@@ -1,0 +1,131 @@
+.container{
+    font-family: monospace;
+    display: grid;
+    grid-row-gap: 1.875em;
+    color: black;
+    grid-template-columns: repeat(6, 1fr);
+    justify-content: center;
+    align-items: center;
+}
+
+.items{
+    font-size: 1.2em;
+    display: flex;
+    height: 3em;
+    color: white;
+    justify-content: center;
+    text-align: center;
+    align-content: center;
+    font-weight: 100;
+    background-color: rgb(31, 30, 30);
+}
+a{
+    position: relative;
+    top: 0.4em;
+    font-size: 1.6em;
+    align-items: center;
+    text-align: center;
+    text-decoration: none;
+    color: white;
+    transition: all;
+    transition-duration: 0.2s;
+    transition-timing-function: ease-in-out;
+}
+
+a:hover{
+    color: rgb(148, 147, 147);
+}
+
+.message{
+    
+    padding-left: 1.1em;
+    grid-column-start: 1;
+    grid-column-end: 7;
+    height: 23em;
+    background-color:#003b72;
+    align-items: center;
+    border: 1px solid black;
+
+}
+strong{
+    font-size: 3em;
+    position: relative;
+    top: 3.4em;
+    color: white;
+}
+
+.form{
+    padding: 2em;
+    padding-left: 5em;
+    background-color: #9ed7fd;
+    ;
+    grid-column-start: 1;
+    grid-column-end:4;
+    height: 37em;
+    border: 1px solid black;
+}
+.input {
+    font-family: monospace;
+    font-weight: 500;
+    padding: 0.5em;
+    font-size: 1.6em;
+    width: 25em;
+    margin: 7px;
+    border: 1px solid white;
+    border-radius: 5px;
+    color: #212121;
+  }
+
+.optionParent{
+    font-size: 1.3em;
+}
+textarea{
+    /* padding-top: 5em; */
+    position: relative;
+    top: 2em;
+    font-size: 1.1em;
+}
+
+.labels{
+    font-size: 1.5em;
+    padding: 0.3em;
+}
+button{
+    position: relative;
+    right: -40em;
+    bottom: 8em;
+    font-size: 2.5em;
+    padding: 0.5em;
+    border-radius: 0.5em;
+    font-family: monospace;
+    background-color: brown;
+    color: white;
+    /* transition: all;
+    transition-timing-function: ease-in-out;
+    transition-duration: 0.3s; */
+    animation: submitBtn;
+    animation-duration: 0.5s;
+    transition-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    border: 2px solid brown;
+}
+
+button:hover{
+    cursor: pointer;
+    background-color: rgb(228, 55, 55);
+}
+
+@keyframes submitBtn {
+    from{
+        border: 2px solid brown;
+        background-color: brown;
+    }    
+    to{
+    border: 2px solid rgb(228, 55, 55);
+        background-color: rgb(228, 55, 55);
+    }
+}
+
+span{
+    color:red
+}

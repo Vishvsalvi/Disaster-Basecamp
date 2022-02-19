@@ -1,0 +1,52 @@
+{% extends './base.html' %}
+
+{% block content %}
+<div class="login"><strong>Login!!
+    <div class="line"></div>
+
+    </strong></div>
+ 
+  <div class="form">
+    <form action="" method="post">
+        {{form.hidden_tag()}}
+      <br>
+     
+      <div>{{form.username.label(class="labels")}}</div>
+      {% if form.username.errors %}
+      {{form.username(class="input")}}
+      {% for error in form.username.errors %}
+      <div>
+        <div>
+            <span>{{error}}</span>
+          </div>
+      </div>
+      {% endfor %}
+
+      {% else %}
+      {{form.username(class="input")}}
+      {% endif %}
+      <br>
+      <div>{{form.password.label(class="labels")}}</div>
+      {% if form.password.errors %}
+      {{form.password(class="input")}}
+      {% for error in form.password.errors %}
+      <div>
+        <span>{{error}}</span>
+      </div>
+      {% endfor %}
+
+      {% else %}
+      {{form.password(class="input")}}
+      {% endif %}
+      
+      <br>
+      {{form.submit(class="button")}}
+    </form>
+  </div>
+
+  <div class="sign-in">
+   <span class="loginMsg">Already having an account?</span> <a class="loginLink" href="{{url_for('login')}}">Login Here</a>
+  </div>
+</div>
+
+{% endblock content %}

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="{{url_for('static', filename='css/main.css')}}" />
+  {% block links %} {% endblock links %}
+  <title>Disaster Management</title>
+</head>
+
+<body>
+  <div class="container">
+
+    <div class="items"><a href="">Home</a></div>
+    <div class="items"><a href="{{url_for('emergency')}}">Emergency</a></div>
+    <div class="items"><a href="">Guidelines</a></div>
+    <div class="items"><a href="{{ url_for('login') }}">Login</a></div>
+    <div class="items"><a href="{{url_for('register')}}">Register</a></div>
+    <div class="items"><a href="">About Us</a></div>
+    {% with messages = get_flashed_messages(with_categories=true) %}
+
+    {% if messages %}
+
+    {% for category, message in messages%}
+        <div>{{message}}</div>
+    {% endfor %}
+    {% endif %}
+
+    {% endwith %}
+    <div class="flash-messages"></div>
+    {% block content %} {% endblock content %}
+
+  </div>
+
+</div>
+
+</body>
+
+</html>
