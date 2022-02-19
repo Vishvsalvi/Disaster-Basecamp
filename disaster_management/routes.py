@@ -48,7 +48,7 @@ def emergency():
             message = f"This is an emergency\nReach at this coordindates now {lat} -{lng} and contact {form.phone.data}"
             server = smtplib.SMTP('smtp.gmail.com', 587)
             server.starttls()
-            server.login('vjti9952@gmail.com', 'VJTI1234')
-            server.sendmail('vjti9952@gmail.com', 'vjti9952@gmail.com', message)
+            server.login('dummyemail', 'dummyemailpassword')
+            server.sendmail('to_addr', 'to_addr', message)
 
     return render_template('emergency.html', form=form)
