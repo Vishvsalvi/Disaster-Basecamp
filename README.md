@@ -32,3 +32,5 @@ install the dependencies, you can find them in the requirements.txt file which i
 `(venv_name) python app.py`
 
 5) You can now visit the website in your browser by navigation to **http://127.0.0.1:5000/** or **http://localhost:5000/**.
+6) To get mail functionality working you need to provide a dummy email and its password and also a address to send email to, you can edit the routes.py in disaster_manager package.
+7) In routes.py in emergency() edit dummyemail, dummyemailpassword, and to_addr to your dummy data.
